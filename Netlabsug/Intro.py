@@ -1,4 +1,4 @@
-'''print ("Hello, how are you doing?")
+print ("Hello, how are you doing?")
 
 # Variables and datatypes
 diary_entry_date="25/05/2025" #string
@@ -38,10 +38,10 @@ total_mood= mood_num + 7 + 9
 average= total_mood/3
 print(f"Average mood: {average:1f}")
 #Validation example
-try: rating= int(input("Mood(1-10):"))
+''' try: rating= int(input("Mood(1-10):"))
 if 1 <= rating <= 10: print("Valid rating!")
 else: print("Please enter 1-10")
-except ValueError: print("Please enter a number!")'''
+except ValueError: print("Please enter a number!") '''
 
 #Date parshing for diary
 date_input= "25/05/2025"
