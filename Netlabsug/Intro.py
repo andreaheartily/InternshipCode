@@ -1,4 +1,4 @@
-print ("Hello, how are you doing?")
+''' print ("Hello, how are you doing?")
 
 # Variables and datatypes
 diary_entry_date="25/05/2025" #string
@@ -38,10 +38,10 @@ total_mood= mood_num + 7 + 9
 average= total_mood/3
 print(f"Average mood: {average:1f}")
 #Validation example
-''' try: rating= int(input("Mood(1-10):"))
+ try: rating= int(input("Mood(1-10):"))
 if 1 <= rating <= 10: print("Valid rating!")
 else: print("Please enter 1-10")
-except ValueError: print("Please enter a number!") '''
+except ValueError: print("Please enter a number!") 
 
 #Date parshing for diary
 date_input= "25/05/2025"
@@ -55,6 +55,72 @@ clean_entry= entry.strip().lower()
 words= clean_entry.strip()
 word_count= len(words)
 print(f"Word count:{word_count}")
-print(f"Word:{words}")
+print(f"Word:{words}") '''
 
 
+# Dictionaries
+person= {
+    "name" : "Alice",
+    "age" : 25,
+    "city" : "New York"
+} # the item on the left is the key and on the right is the value
+# .item is used to print out the key-value pair, .key prints the key, .value prints the value
+
+#Boolean data type and logical operators
+x=5
+y=10
+print(x>0 and y>0)
+print(x>10 or y<20)
+print(not (x==5))
+
+#Conditional statements
+age=20
+if age >= 18:
+    print("You are an adult")
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+
+marks = 85
+if marks>= 90:
+    print("A")
+elif marks>= 80:
+    print("B")
+elif marks>= 70:
+    print("C")
+else:
+    print("Null")
+
+#Loops
+#while loop
+i=0
+while i<5:
+    print(i)
+    i+=1 # i=i+1, i++ 
+
+#for loop
+for i in range (5):
+    print (i) # prints values from 0-5
+
+#Nested loops
+for i in range(2):
+    for j in range(3):
+        print(f"i={i}, j={j}")
+
+#Functions
+def greet ():
+    print("Hello")
+greet()
+
+#parameters and arguments
+def greet(name):
+    print(f"Hello, {name}!")
+greet("Alice")
+
+#Return 
+def square(x):
+    return x*x
+result = square(5)
+print (result)

@@ -22,7 +22,7 @@ print(f"Creative outlet:{creativeoutlet}")
 print("="*40  + "\n" )
 
 #Average mood, asking for mood, calculating the average mood
-mood_str= input("Rate your mood (1-10):")
+mood_str= input("Rate your mood (1-10):") #getting user input for mood
 mood_num= int(mood_str)# Converting to integer
 print(f"Your mood level: {mood_num}")
 #Calculate average mood over time
@@ -41,14 +41,15 @@ entries = {
  } # Dictionary for storage of the different entries
 
 #Function to find the longest entry and it's length
-longest_label, longest_value = max(entries.items(), key=lambda item: len(str(item[1])))
+longest_label, longest_value = max(entries.items(), key=lambda item: len(str(item[1]))) # max is used to find the maximum value, .items returns a view object containing all key-value pairs, key customizes the comparision, lambda takes the value part of the key value item which is 1 and the lenght of the value is calculated in it's string format.
 #Display
 print(f"The longest entry is '{longest_label}': {longest_value} (Length: {len(longest_value)})\n")
+# longest_label, longest_value is a tuple unpacked into two different variables.
 
 #Word count for each entry
 #Calculation
-word_counts = {label: len(value.split()) for label, value in entries.items()}
-#Display using loops
+word_counts = {label: len(value.split()) for label, value in entries.items()} # new dictionary(word_counts) created, 
+#Display using for loop
 print("Word Count for Each Entry:")
 for label, count in word_counts.items():
     print(f"{label}: {count} words")
