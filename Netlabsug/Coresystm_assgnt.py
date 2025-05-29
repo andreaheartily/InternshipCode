@@ -6,6 +6,7 @@ print(f"Hello, {name}")
 
 #Diary entries, using input function to get interactive user output
 gender=input("What's your gender?")
+date=input("What's the date today?")
 dailygoal=input("What's your goal for today?")
 weather=input("What's today's weather?")
 hobby=input("What's your hobby?")
@@ -14,6 +15,7 @@ creativeoutlet=input("What's your creative outlet?")
 #Display of entries, formatting and displaying user input
 print("\n" + "="*40) 
 print(f"Name:{name}")
+print(f"Date:{date}")
 print(f"Gender:{gender}")
 print(f"weather:{weather}")
 print(f"Daily goal:{dailygoal}")
@@ -33,6 +35,7 @@ print(f"Average mood: {average:1f}\n")
 #Longest entry
 entries = {
     "Name": name,
+    "Date" : date,
     "Gender": gender,
     "Weather": weather,
     "Daily goal": dailygoal,
