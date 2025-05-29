@@ -41,7 +41,7 @@ entries = {
  } # Dictionary for storage of the different entries
 
 #Function to find the longest entry and it's length
-longest_label, longest_value = max(entries.items(), key=lambda item: len(str(item[1]))) # max is used to find the maximum value, .items returns a view object containing all key-value pairs, key customizes the comparision, lambda takes the value part of the key value item which is 1 and the lenght of the value is calculated in it's string format.
+longest_label, longest_value = max(entries.items(), key=lambda item: len(str(item[1]))) # max is used to find the maximum value, .items returns a view object containing all key-value pairs, key customizes the comparision, lambda takes the value part of the key value item which is 1 and the length of the value is calculated in it's string format.
 #Display
 print(f"The longest entry is '{longest_label}': {longest_value} (Length: {len(longest_value)})\n")
 # longest_label, longest_value is a tuple unpacked into two different variables.

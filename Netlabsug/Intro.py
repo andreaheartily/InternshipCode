@@ -55,7 +55,7 @@ clean_entry= entry.strip().lower()
 words= clean_entry.strip()
 word_count= len(words)
 print(f"Word count:{word_count}")
-print(f"Word:{words}") '''
+print(f"Word:{words}") 
 
 
 # Dictionaries
@@ -124,3 +124,124 @@ def square(x):
     return x*x
 result = square(5)
 print (result)
+
+#Data Structures
+
+#Adding to a list
+ds = {
+    'Mark',
+    'John',
+    'Matthew'
+}
+#using append
+ds.append = ('Alice')
+#using extend
+newds = ('Peter','Phillip')
+ds.extend(newds)
+#using insert
+
+print(ds)
+
+#Finding and counting 
+weekly_attendes = ['Alice', 'Bob', 'Alice', 'Charlie', 'Alice']
+#count occurences
+alice_count = weekly_attendes.count('Alice')
+print(f"Alice count: {alice_count}")
+
+#Removing elements
+weekly_attendes.remove('Bob') #remove first occurence 
+
+#Sorting and reversing
+
+#LIFO(stack)
+
+#FIFO(queue)
+
+apps = ['instagram', 'tiktok', 'duolingo', 'candy_crush', 'banking_app']
+del apps[3]
+print(apps)
+
+#Sets
+set_one = [1,2,4,9,16]
+set_two = [1,2,3,5,7,9]
+print(f"Union: {set_one | set_two}")
+print(f"Intersection: {set_one & set_two}")
+print(f"Difference: {set_one - set_two}")
+print(f"Symmetric difference: {set_one ^ set_two}")
+
+with open (r"C:\Users\andre_eergmfm\OneDrive\Documents\Programming text files\file.txt", 'a') as file:
+    file.write('This is from a report about the internet of things.')
+
+with open (r"C:\Users\andre_eergmfm\OneDrive\Documents\Programming text files\file.txt", 'r') as file:
+    content = file.read()
+    print(content)
+
+with open (r"C:\Users\andre_eergmfm\OneDrive\Documents\Programming text files\sample.txt", 'w') as file:
+    file.write('This is from a report about the internet of things.')
+
+with open (r"C:\Users\andre_eergmfm\OneDrive\Documents\Programming text files\sample.txt", 'r') as file:
+    content = file.read()
+    print(content)
+
+student_info = {
+    'name' : 'Sarah',
+    'age' : 16,
+    'subjects' : ['Math', 'Science', 'Computer Science'],
+    'gpa' : 3.8
+}
+
+def display_student(student):
+    print(f"Student : {student['name']}")
+    print(f"Age: {student['age']}")
+    print("Subjects:")
+    for subject in student['subjects']:
+        print(f" - {subject}")
+    
+    if student['gpa'] >= 3.5:
+        print("Great job! You are doing excellent!")
+    else:
+        print("Keep working hard!")
+
+display_student(student_info) 
+
+# Object Oriented Programming
+
+def _init_(self,name,age): # init is a constructor, initialises the object with starting values, ensures every objest starts with the necessary attributes
+    self.name = name
+    self.age = age
+    Animal = Animal("Dog", 14)
+print(f"This is a {name} and it's {age} years old.")'''
+
+class Student:
+    # ... attributes from above ...
+    
+    # Method that doesn't change anything (getter)
+    def get_info(self):
+        return f"{self.name} - Grade {self.grade}"
+    
+    # Method that changes object state (setter)
+    def set_gpa(self, new_gpa):
+        if 0.0 <= new_gpa <= 4.0:
+            self.gpa = new_gpa
+        else:
+            print("Invalid GPA! Must be between 0.0 and 4.0")
+    
+    # Method that performs an action
+    def celebrate_birthday(self):
+        self.age += 1
+        print(f"🎉 Happy Birthday {self.name}! Now {self.age} years old!")
+
+# Using methods
+student = Student("Emma", 16, 10)
+print(student.get_info())     # Emma - Grade 10
+student.set_gpa(3.8)         # Sets GPA to 3.8
+student.celebrate_birthday() # 🎉 Happy Birthday Emma! Now 17 years old!
+
+'''class Student:
+    def _init_(self, name, age, grade):
+        # These are attributes
+        self.name = name      # String attribute
+        self.age = age        # Integer attribute
+        self.grade = grade    # Integer attribute
+        self.subjects = []    # List attribute
+        self.gpa = 0.0       # Float attribute'''
