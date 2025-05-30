@@ -4,11 +4,22 @@
 def get_student_data():
     student = {
         'name' : input("What's your name? "),
-        'scores' : [
+        'score' : [
             float(input("What's your score for test1?")),
         ]
     }
     return student
+#Exception handling for score input
+try:
+ score = float("ninety")
+except ValueError:
+    print("Please enter a number, not text!")
+try:
+    if 0>= score <=100:
+        print("score")
+except ValueError:
+    print("Please enter a number from 0 to 100")
+
 #Display of student data
 student_data=get_student_data()
 print("\nStudent Data:")
@@ -26,10 +37,10 @@ def calculate_grade(score):
         print("F")
 
 #Function for student statistics
-def class_statistics(*scores):
-    minimum = min(scores),
-    maximum = max(scores),
-    average = sum(scores)/len(scores)
+def class_statistics(*score):
+    minimum = min(score),
+    maximum = max(score),
+    average = sum(score)/len(score)
     return minimum, maximum, average
 
 #Display of student score and grade
@@ -53,7 +64,7 @@ def sum_scores(n):
 #Function for user interaction
 def user_interaction(student):
     name = str(input("Enter a name: "))
-    
+    #add code for score input then append to student dict
     if name in student[name]:
         score = student[score]
         grade = calculate_grade(score)
@@ -61,7 +72,16 @@ def user_interaction(student):
     else:
         print(f"{name} does not exist.")
 
-        
+#Exception handling for input
+try:
+    student={}
+    name= student.item(0)
+    if name in student[name]:
+        print([name])
+except:
+    print("This name exists in the system")
+
+
 
 
 
